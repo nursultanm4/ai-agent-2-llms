@@ -25,14 +25,12 @@ async def call_gpt4o(request_id: str, prompt: str) -> str:
     loop = asyncio.get_event_loop()
     return await loop.run_in_executor(None, sync_gpt4o, request_id, prompt)
 
+
+#  Issues ---->  FIXED
+
 # response.choices[0]. 
 ### -- модель может вернуть несколько вариантов ответа; берём первый .
 ######## -- Logs: OpenAI executor failed after 3.18s: object ChatCompletion can't be used in 'await' expression
 
-
 # Agent is sometimes returning a "redefined prompt" and hardcoded config texts, instead of real answers to users' requests. This happens because the orchestrator (Gemma) is mistakenly sends those directly to the user.
 # We gotta ensure only the executor model's answer is returned to the user, never the orchestrator's suggestions or prompt refinements.
-
-
-#  + Frontend feature: let user stop agent while it's still thinking.
-
