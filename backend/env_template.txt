@@ -1,0 +1,23 @@
+# Server Configuration
+ALLOWED_ORIGINS=http://localhost:5173
+HTTP_REQUEST_TIMEOUT_S=30
+MAX_RETRIES=2
+
+# Cache Configuration
+CACHE_TTL_SECONDS=600
+CACHE_MAX_SIZE=1000
+
+# LLM Configuration
+GOOGLE_API_KEY=your_gemma_api_key_here
+GEMMA_ORCHESTRATOR_MODEL=gemma-1-3b
+
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_EXECUTOR_MODEL=gpt-4o-mini
+
+
+# Logging Configuration
+LOG_LEVEL=INFO
+LOG_DIR=logs
+LOG_FILE=ai_agent.log
+LOG_MAX_SIZE=10485760
+LOG_BACKUP_COUNT=5
