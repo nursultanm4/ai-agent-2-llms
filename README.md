@@ -2,31 +2,6 @@
 
 A full-stack AI agent system that orchestrates multiple LLM models to provide intelligent responses through a web interface.
 
-## Architecture Overview
-
-```
-ai-agent/
-├── backend/                 # FastAPI backend service
-│   ├── main.py             # Application entry point
-│   ├── config.py           # Configuration management
-│   ├── logger.py           # Structured logging
-│   ├── schemas.py          # Pydantic models
-│   ├── services/           # Business logic
-│   │   ├── llm_service.py  # LLM API integration
-│   │   └── cache_service.py # In-memory caching
-│   ├── routes/             # API endpoints
-│   │   ├── health.py       # Health monitoring
-│   │   └── ai_agent.py     # Main AI endpoints
-│   └── requirements.txt    # Python dependencies
-├── frontend/               # React & TS + Vite frontend
-│   ├── src/
-│   │   ├── App.tsx         # Main application
-│   │   └── main.tsx        # Entry point
-│   ├── package.json        # Node dependencies
-│   └── vite.config.ts      # Build configuration
-└── docs/                   # Documentation
-```
-
 ## Core Features
 
 ### 🧠 **Dual LLM Orchestration**
