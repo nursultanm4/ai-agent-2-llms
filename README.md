@@ -76,6 +76,7 @@ User Query → Cache Check → Orchestrator → Executor → Response
 - Python 3.8+
 - Node.js 16+
 - Google AI Studio API key
+- OpenAI API key
 
 ### Backend Setup
 ```bash
